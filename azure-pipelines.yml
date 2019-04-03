@@ -7,10 +7,8 @@ steps:
   inputs:
     version: '2.2.105' # replace this value with the version that you need for your project
 # ...
-steps:
 - script: dotnet restore
 
-steps:
 - task: DotNetCoreCLI@2
   displayName: Build
   inputs:
