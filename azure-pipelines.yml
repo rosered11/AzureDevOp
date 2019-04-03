@@ -15,4 +15,5 @@ steps:
     projects: '**/*.csproj'
     arguments: '--configuration Release' # Update this to match your need
 - task: Restore@1
-  script: dotnet restore
+  inputs: 
+    command: dotnet restore
