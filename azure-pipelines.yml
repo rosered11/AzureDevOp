@@ -7,13 +7,12 @@ steps:
   inputs:
     version: '2.2.105' # replace this value with the version that you need for your project
 # ...
-
+- task: Restore@1
+  inputs: 
+    command: dotnet restore
 - task: Build@2 #DotNetCoreCLI@2
   displayName: Build
   inputs:
     command: build
     projects: '**/*.csproj'
     arguments: '--configuration Release' # Update this to match your need
-- task: Restore@1
-  inputs: 
-    command: dotnet restore
